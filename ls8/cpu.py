@@ -171,7 +171,6 @@ class CPU:
                 self.reg[self.sp] -= 1
                 self.ram[self.reg[self.sp]] = self.pc + 2
                 self.pc = self.reg[operand_a]
-                
             elif ir == RET:
                 val = self.ram[self.reg[self.sp]] 
                 self.pc = val
